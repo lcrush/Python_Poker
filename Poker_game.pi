@@ -1,0 +1,43 @@
+from pokerdeck import *
+from random import choice, shuffle
+
+ranks = [str(n) for n in range(2, 11)] + list('JQKA')
+suits = '♥ ♦ ♣ ♠'.split()
+suits = 'spades diamonds clubs hearts'.split()
+
+deck = PokerDeck()
+
+shuffle(deck)
+
+myCard = choice(deck)
+
+print(myCard)
+print(myCard.rank)
+theCard = Card(rank='K', suite='♥')
+
+print(theCard.rank, theCard.suit)
+
+hand = []
+
+for _ in range(5):
+    hand.append(choice(deck))
+
+for card in hand:
+    print(card)
+
+rank_list = []
+
+for card in hand:
+    rank_list.append(card.rank)
+print(rank_list)
+
+def find_pairs(rank_list):
+    for rank in rank_list:
+        if rank_list.count(rank) > 1:
+            print('at least a pair')
+            break
+    else:
+        return False
+    return True
+
+find_pairs(rank_list)
