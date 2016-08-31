@@ -3,9 +3,9 @@ sudo: false
 language: python
 
 python:
-  -3.5
+  - 3.5
   
-install:
+instal:
   - pip install codecov
   
 script:
@@ -13,3 +13,4 @@ script:
   
 after_success:
   - codecov
+  
