@@ -2,11 +2,15 @@ sudo: false
 
 language: python
 
-install:
+python:
   - 3.5
+  
+install:
+  - codecov
   
 script:
   - pip install codecov
   
 after_success:
   - codecov
+  
