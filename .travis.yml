@@ -4,13 +4,12 @@ language: python
 
 python:
   - 3.5
-  
+
 install:
-  - codecov
-  
-script:
   - pip install codecov
-  
+
+script:
+  - coverage run TestHandEval.py
+
 after_success:
   - codecov
-  
