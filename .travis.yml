@@ -1,0 +1,12 @@
+sudo: false
+
+language: python
+
+install:
+  - 3.5
+  
+script:
+  - pip install codecov
+  
+after_success:
+  - codecov
