@@ -33,4 +33,4 @@ def test_find_four():
     four_kind = [Card('K', '♦'), Card('K', '♥'), Card('K', '♠'), Card('K', '♣'), Card('4', '♠')]
     assert find_four(ranks) == ['K', 'K', 'K', 'K', '4']
 
-def test_
+def test_ 
