@@ -28,3 +28,9 @@ def test_find_pairs():
 def test_find_set():
     three_kind = [Card('K', '♦'), Card('K', '♥'), Card('K', '♠'), Card('J', '♠'), Card('4', '♠')]
     assert find_set(ranks) == ['K', 'K', 'K', 'J', '4']
+
+def test_find_four():
+    four_kind = [Card('K', '♦'), Card('K', '♥'), Card('K', '♠'), Card('K', '♣'), Card('4', '♠')]
+    assert find_four(ranks) == ['K', 'K', 'K', 'K', '4']
+
+def test_
