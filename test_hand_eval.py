@@ -19,6 +19,10 @@ def test_no_dupes():
 # pair_hand = [Card('9', '♦'), Card('9', '♥'), Card('4', '♠'), Card('J', '♠'), Card('Q', '♠')]
 # no_pair_hand = [Card('8', '♦'), Card('9', '♥'), Card('4', '♠'), Card('J', '♠'), Card('Q', '♠')]
 
+def test_find_ranks():
+    pair_hand = [Card('9', '♦'), Card('9', '♥'), Card('4', '♠'), Card('J', '♠'), Card('Q', '♠')]
+    assert find_ranks(pair_hand) == ['9', '9', '4', 'J', 'Q']
+
 def test_find_suits():
     pair_hand = [Card('9', '♦'), Card('9', '♥'), Card('4', '♠'), Card('J', '♠'), Card('Q', '♠')]
     assert find_suits(pair_hand) == ['♦', '♥', '♠', '♠','♠']
