@@ -25,7 +25,6 @@ def test_find_suits():
 
 def test_find_pairs():
     pairs = [Card('8', '♦'), Card('K', '♥'), Card('K', '♠'), Card('J', '♠'), Card('4', '♠')]
-    len = 2
     assert find_ranks(pairs) == ['8', 'K', 'K', '4', 'J']
     assert find_len(pairs) == 2
 
