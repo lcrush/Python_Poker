@@ -46,11 +46,12 @@ def test_find_flush():
 
 def test_strait():
     strait_kind = [Card('J', '♦'), Card('10', '♦'), Card('A', '♦'), Card('Q', '♦'), Card('K', '♦')]
-    assert find_strait(ranks) == ['J', '10', 'A', 'Q', 'K']
+    assert find_strait(['J', '10', 'A', 'Q', 'K']) == True
 
 def test_straitFlush():
-    straitFlush_kind = [Card('J', '♦'), Card('10', '♦'), Card('A', '♦'), Card('Q', '♦'), Card('K', '♦')]
-    assert find_straitFlush(ranks, suits) == [('J', '♦'), ('10', '♦'), ('A', '♦'), ('Q', '♦'), ('K', '♦')]
+    ranks = ['J', '10', 'A', 'K', 'Q']
+    suits = ['♦', '♦', '♦', '♦', '♦']
+    assert find_straitFlush(ranks, suits) == True
 
 def test_ranks():
     ranks_kind = [('J', '11'), ('Q', '12'), ('K', '13'), ('A', '14')]
