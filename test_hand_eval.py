@@ -51,5 +51,5 @@ def test_strait():
 
 def test_straitFlush():
     straitFlush_kind = [Card('J', '♦'), Card('10', '♦'), Card('A', '♦'), Card('Q', '♦'), Card('K', '♦')]
-    assert find_straitFlush(ranks, suits) == ['J', '♦', '10', '♦', 'A', '♦', 'Q', '♦', 'K', '♦']
+    assert find_straitFlush(ranks, suits) == [('J', '♦'), ('10', '♦'), ('A', '♦'), ('Q', '♦'), ('K', '♦')]
 
