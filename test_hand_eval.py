@@ -23,9 +23,9 @@ def test_find_suits():
     pair_hand = [Card('9', '♦'), Card('9', '♥'), Card('4', '♠'), Card('J', '♠'), Card('Q', '♠')]
     assert find_suits(pair_hand) == ['♦', '♥', '♠', '♠','♠']
 
-
 def test_find_pairs():
     pairs = [Card('8', '♦'), Card('K', '♥'), Card('K', '♠'), Card('J', '♠'), Card('4', '♠')]
+    len = 2
     assert find_ranks(pairs) == ['8', 'K', 'K', '4', 'J']
     assert find_len(pairs) == 2
 
@@ -55,4 +55,6 @@ def test_straitFlush():
 
 def test_ranks():
     ranks_kind = [Card('J', '11'), Card('Q', '12'), Card('K', '13'), Card('A', '14')]
+    ranks = int(ranks[i])
     assert find_ranks[i] == [11, 12, 13, 14]
+    assert find_ranks[i] == int(ranks[i])
