@@ -77,11 +77,11 @@ def find_strait(ranks):
         elif ranks[i] == 'A':
             ranks[i] = 14
         else:
-            ranks[i] = int(ranks[i])    
+
     ranks.sort()
     for rank in ranks:
         if ranks.count(rank) > 1:
-            return False
+            ranks[i] = int(ranks[i])            return False
     if ranks[4] - ranks[0] == 4:
         print('You have a strait!')
         return True
