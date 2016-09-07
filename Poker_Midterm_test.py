@@ -56,10 +56,9 @@ def find_fullhouse(ranks):
         if len(f_h) == 5:
             print('You have a fullhouse!')
             for card in fullhouse_kind:
-                print(card, end = ' ')            
-            return True            
-        else:
-            return False
+                print(card, end = ' ')
+            return True
+    return False
           
 def find_flush(suits):
     if suits.count(suits[0]) == 5:
